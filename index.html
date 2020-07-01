@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/5c7edfd842.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Pangolin&family=Raleway:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/universal.css">
+    <link rel="stylesheet" href="CSS/index.css">
+    <title>toDo - To Do List</title>
+</head>
+<body>
+    <header>
+        <h1>toDo</h1>
+        <img id="addNewToDo" src="IMG/plus.svg" alt="">
+    </header>
+    <div class="modalConteiner">
+        <div class="modalForm">
+            <input type="text" name="tarefa" id="inputTarefa" placeholder="Tarefa">
+            <p>Nível de Prioridade</p>
+            <select name="prioridade" id="inputPrioridade">
+                <option value="4">4</option>
+                <option value="3">3</option>
+                <option value="2">2</option>
+                <option value="1">1</option>
+            </select>
+            <button id="buttonClose">X</button>
+            <button id="buttonAdd">Adicionar Tarefa</button>
+        </div>
+    </div>
+    <div id="conteinerToDo" class="conteiner">
+        
+    </div>
+    <div id="conteinerDone" class="conteiner">
+        
+    </div>
+    <script src="JS/index.js"></script>
+    <script src="JS/openAndClosePopup.js"></script>
+</body>
+
+</html>

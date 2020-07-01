@@ -1,0 +1,148 @@
+@media only screen and (max-width: 414px){
+    body{
+        background-color: #ffffff;
+    }
+    header{
+        background-color: rgb(0, 132, 255);
+        padding: 10px;
+        color: #fff;
+        text-align: center;
+    }
+    header img{
+        position: absolute;
+        width: 30px;
+        right: 10px;
+        top: 15px;
+    }
+    .conteiner{
+        position: relative;
+        width: 100%;
+        margin-top: 25px;
+    }
+    .prioridade4{
+        background-color: #ff0062;
+    }
+    .prioridade3{
+        background-color: #006eff;;
+    }
+    .prioridade3{
+        background-color: #ffd000;;
+    }
+    .prioridade2{
+        background-color: #ff6600;
+    }
+    .prioridade1{
+        background-color: #333;
+    }
+    .toDoItem{
+        display: flex;
+        justify-content: start;
+        position: relative;
+        width: 95%;
+        height: 80px;
+        margin: 15px 0 0 0;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 5px;
+        border: 1px solid #222;
+        background-color: #fff;
+    }
+    .toDoItem i {
+        position: relative;
+        font-size: 30px;
+        padding: 0 10px;
+        top: 25%;
+        color: #333;
+    }
+    .toDoItem span {
+        position: relative;
+        background-color: #fff;
+        width: 85%;
+        padding: 10px;
+    }
+    .toDoItem span p{
+        font-family: 'Raleway', sans-serif;
+        color: #333;
+    }
+    .toDoItem > div{
+        position: relative;
+        right: 0;
+        border-radius: 0 5px 5px 0;
+        width: 5%;
+        height: 100%;
+        border: none;
+    }
+    #conteinerDone{
+        border-top: 1px dashed #333;
+    }
+    #conteinerDone > div {
+        opacity: 0.6;
+    }
+    #conteinerDone > div > i{
+        color: rgb(23, 238, 23);
+    }
+    .modalConteiner{
+        display: none;
+        position: fixed;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        background-color: #006eff;
+        background-color: rgba(224, 224, 224, 0.699);
+    }
+    .modalForm{
+        position: relative;
+        width: 80%;
+        height: 200px;
+        top: 20%;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #fff;
+        border-radius: 5px;
+    }
+    .modalForm button{
+        border: none;
+        padding: 10px;
+    }
+    .modalForm > #buttonClose{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 40px;
+        background-color: #ff0062;
+        border-radius: 0 5px 0 0;
+        color: white;
+        font-weight: 700;
+    }
+    .modalForm > *{
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .modalForm > #inputTarefa{
+        position: relative;
+        margin-top: 50px;
+        margin-bottom: 15px;
+        width: 85%;
+        margin-left: 10px;
+        padding: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 16px;
+    }
+    .modalForm > p{
+        margin-bottom: 5px;
+        color: #333;
+    }
+    .modalForm > p, #inputPrioridade {
+        margin-left: 10px;
+    }
+    .modalForm > #buttonAdd{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: #00aeff;
+        color: #fff;
+        font-size: 15px;
+        font-family: Arial, Helvetica, sans-serif;
+        width: 100%;
+        border-radius: 0 0 5px 5px;
+    }
+}
