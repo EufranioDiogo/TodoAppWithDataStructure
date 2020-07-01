@@ -65,14 +65,17 @@ class ToDoList {
 
     completeToDo(toDoPosition) {
         if (toDoPosition > 0 && toDoPosition <= this.size) {
-            window.alert('entrou' + toDoPosition)
             let result = null;
 
-            if (toDoPosition == 1) {
+            if (toDoPosition == 1 && this.size == 1) {
+                result = this.head;
+                this.head = null;
+                this.tail = null;
+            }else if(toDoPosition == 1){
                 result = this.head;
                 this.head = this.head.next;
                 this.head.prev = null;
-            } else if (toDoPosition == this.size) {
+            }else if (toDoPosition == this.size) {
                 result = this.tail;
                 this.tail = this.tail.prev;
                 this.tail.next = null;
@@ -107,7 +110,7 @@ function addTodoInCompletedList(todo){
 }
 
 function cleanConteiner(conteiner){
-    conteiner.innerHTML = ''
+    conteiner.innerHTML = '';
 }
 
 function renderToDoItens(todoList){
@@ -148,7 +151,6 @@ function renderToDoItens(todoList){
 
         document.querySelector('#conteinerToDo').appendChild(divToDoItem)
 
-        console.log(divToDoItem)
         aux = aux.getNext();
         id += 1
     }
@@ -159,7 +161,6 @@ function addTheFunctionToCompleteTask(conteiner){
     for(let i = 0; i < conteiner.childElementCount; i++){
         conteiner.childNodes[i].childNodes[0].onclick = () => {
             todoList.completeToDo(conteiner.childNodes[i].getAttribute('id'))
-            alert('Entrando com o id: ' + conteiner.childNodes[i].getAttribute('id'))
         }
     }
 }
