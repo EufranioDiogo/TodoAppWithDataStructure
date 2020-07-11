@@ -1,40 +1,47 @@
-@media only screen and (max-width: 414px){
-    body{
+@media only screen and (max-width: 768px) {
+    body {
         background-color: #ffffff;
     }
-    header{
+    header {
         background-color: rgb(0, 132, 255);
         padding: 10px;
         color: #fff;
         text-align: center;
+        position: fixed;
+        z-index: 1;
+        width: 100%;
+        top: 0;
     }
-    header img{
+    header img {
         position: absolute;
         width: 30px;
-        right: 10px;
-        top: 15px;
+        right: 8%;
+        top: 50%;
+        transform: translateY(-50%);
     }
-    .conteiner{
+    .conteiner {
         position: relative;
         width: 100%;
         margin-top: 25px;
     }
-    .prioridade4{
+    .prioridade4 {
         background-color: #ff0062;
     }
-    .prioridade3{
-        background-color: #006eff;;
+    .prioridade3 {
+        background-color: #006eff;
+        ;
     }
-    .prioridade3{
-        background-color: #ffd000;;
+    .prioridade3 {
+        background-color: #ffd000;
+        ;
     }
-    .prioridade2{
+    .prioridade2 {
         background-color: #ff6600;
     }
-    .prioridade1{
+    .prioridade1 {
         background-color: #333;
     }
-    .toDoItem{
+    .toDoItem {
         display: flex;
         justify-content: start;
         position: relative;
@@ -60,11 +67,11 @@
         width: 85%;
         padding: 10px;
     }
-    .toDoItem span p{
+    .toDoItem span p {
         font-family: 'Raleway', sans-serif;
         color: #333;
     }
-    .toDoItem > div{
+    .toDoItem>div {
         position: relative;
         right: 0;
         border-radius: 0 5px 5px 0;
@@ -72,25 +79,36 @@
         height: 100%;
         border: none;
     }
-    #conteinerDone{
-        border-top: 1px dashed #333;
-    }
-    #conteinerDone > div {
+    #conteinerDone>div {
         opacity: 0.6;
     }
-    #conteinerDone > div > i{
+    #conteinerDone>div>i {
         color: rgb(23, 238, 23);
     }
-    .modalConteiner{
+    .optionToDo {
+        border-radius: 0 !important;
+        position: absolute;
+        width: 60% !important;
+        height: 100%;
+        background-color: rgba(219, 219, 219, 0.185);
+    }
+    .trash {
+        color: #ff0062 !important;
+    }
+    .edit {
+        color: #00b7ff !important;
+    }
+    .modalConteiner {
         display: none;
         position: fixed;
+        top: 60px;
         z-index: 1;
         width: 100%;
         height: 100%;
         background-color: #006eff;
         background-color: rgba(224, 224, 224, 0.699);
     }
-    .modalForm{
+    .modalForm {
         position: relative;
         width: 80%;
         height: 200px;
@@ -100,24 +118,24 @@
         background-color: #fff;
         border-radius: 5px;
     }
-    .modalForm button{
+    .modalForm button {
         border: none;
         padding: 10px;
     }
-    .modalForm > #buttonClose{
+    .modalForm>#buttonClose {
         position: absolute;
         top: 0;
         right: 0;
         width: 40px;
         background-color: #ff0062;
-        border-radius: 0 5px 0 0;
+        border-radius: 0 5px 0 5px;
         color: white;
         font-weight: 700;
     }
-    .modalForm > *{
+    .modalForm>* {
         font-family: Arial, Helvetica, sans-serif;
     }
-    .modalForm > #inputTarefa{
+    .modalForm>#inputTarefa {
         position: relative;
         margin-top: 50px;
         margin-bottom: 15px;
@@ -127,14 +145,14 @@
         font-family: Arial, Helvetica, sans-serif;
         font-size: 16px;
     }
-    .modalForm > p{
+    .modalForm>p {
         margin-bottom: 5px;
         color: #333;
     }
-    .modalForm > p, #inputPrioridade {
+    .modalForm>p, #inputPrioridade {
         margin-left: 10px;
     }
-    .modalForm > #buttonAdd{
+    .modalForm>#buttonAdd {
         position: absolute;
         bottom: 0;
         left: 0;
@@ -144,5 +162,38 @@
         font-family: Arial, Helvetica, sans-serif;
         width: 100%;
         border-radius: 0 0 5px 5px;
+    }
+    .header {
+        position: relative;
+        background-color: #f0f0f03f;
+        padding: 10px;
+        color: #222222;
+    }
+    .header h2 {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    body>div:nth-child(3) {
+        margin-top: 75px;
+    }
+    body>div:nth-child(5) {
+        border-top: 1px dashed #222;
+    }
+    body>div:nth-child(5) {
+        margin-top: 25px;
+    }
+    .cleanButton {
+        position: absolute;
+        right: 2%;
+        background-color: #f5284a;
+        padding: 5px;
+        border: none;
+        color: #fff;
+        font-weight: 600;
+        width: 80px;
+        font-size: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+        top: 10px;
+        border-radius: 5px;
+        display: none;
     }
 }

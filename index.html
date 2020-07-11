@@ -5,11 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/5c7edfd842.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Pangolin&family=Raleway:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pangolin&family=Raleway:wght@300&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="CSS/universal.css">
     <link rel="stylesheet" href="CSS/index.css">
     <title>toDo - To Do List</title>
 </head>
+
 <body>
     <header>
         <h1>toDo</h1>
@@ -17,7 +19,7 @@
     </header>
     <div class="modalConteiner">
         <div class="modalForm">
-            <input type="text" name="tarefa" id="inputTarefa" placeholder="Tarefa">
+            <input type="text" name="tarefa" id="inputTarefa" placeholder="Tarefa" autocomplete="off">
             <p>Nível de Prioridade</p>
             <select name="prioridade" id="inputPrioridade">
                 <option value="4">4</option>
@@ -29,11 +31,21 @@
             <button id="buttonAdd">Adicionar Tarefa</button>
         </div>
     </div>
+    <div class="header">
+        <h2>Tarefas Pendentes</h2>
+        <button id="buttonLimpar1" class="cleanButton">Limpar</button>
+    </div>
+    <!--Add a clean up button to delete all task-->
+    <!--And If you click in the toDo Open a Desc about the toDo(To Think and work in)-->
     <div id="conteinerToDo" class="conteiner">
         
     </div>
+    <div class="header">
+        <h2>Tarefas Feitas</h2>
+        <button id="buttonLimpar2" class="cleanButton">Limpar</button>
+    </div>
     <div id="conteinerDone" class="conteiner">
-        
+
     </div>
     <script src="JS/index.js"></script>
     <script src="JS/openAndClosePopup.js"></script>
