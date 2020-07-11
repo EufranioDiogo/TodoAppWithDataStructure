@@ -25,4 +25,26 @@ I has been studying data stucture and I learned some new stuffs and at this poin
   
 ## Pictures
 
-![](IMG/plus.svg)
+### First Screen
+
+![First Screen](IMG/Begin.png)
+
+## Adding To Do
+
+![Adding To Do](IMG/AddingTask.png)
+
+## To Do List view
+
+![To Do List Viewport](IMG/TaskViewport.png)
+
+## To Do Done view(bottom)
+
+![To Do Done](IMG/DoneTaskViewport.png)
+
+## Deleting To Do
+
+![Deleting To Do](IMG/DeletingTask.png)
+
+## Updating To Do
+
+![Updating To Do](IMG/UpdatingTask.png)
