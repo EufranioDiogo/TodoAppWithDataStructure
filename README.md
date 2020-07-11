@@ -25,10 +25,6 @@ I has been studying data stucture and I learned some new stuffs and at this poin
   
 ## Layout Project
 
-### First Screen
-
-![First Screen](IMG/AddingTask0.png)
-
 ## Adding To Do
 
 ![Adding To Do](IMG/AddingTask0.png)
@@ -37,7 +33,6 @@ I has been studying data stucture and I learned some new stuffs and at this poin
 ## To Do List view
 
 ![To Do List Viewport](IMG/Viewport.png)
-![To Do List Viewport](IMG/DoneTaskViewport.png)
 
 ## Deleting To Do
 
@@ -49,6 +44,7 @@ I has been studying data stucture and I learned some new stuffs and at this poin
 ![Updating To Do](IMG/Updating0.png)
 ![Updating To Do](IMG/Updating1.png)
 ![Updating To Do](IMG/Updating2.png)
+![Updating To Do](IMG/Updating3.png)
 
 ## Undo Task
 
