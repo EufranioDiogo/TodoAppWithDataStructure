@@ -105,7 +105,7 @@ class ToDoList {
                 result.next.prev = result.prev;
             }
             this.size -= 1;
-            addTodoInCompletedList(result)
+            addTodoInCompletedList(result);
         }
     }
 
@@ -167,7 +167,7 @@ function cleanConteiner(conteiner) {
     conteiner.innerHTML = '';
 }
 
-function renderToDoItens(todoList) {
+function renderToDoItens() {
     let conteinerToDo = document.querySelector('#conteinerToDo');
 
     cleanConteiner(conteinerToDo);
@@ -240,7 +240,7 @@ function addTheFunctionToCompleteTask(conteiner) {
         }
         conteiner.childNodes[i].childNodes[2].childNodes[0].onclick = () => {
             let node = todoList.getToDo(conteiner.childNodes[i].getAttribute('id'))
-    
+
             flagVisible = 1;
 
             modalPopup.style.display = 'block';
@@ -250,14 +250,14 @@ function addTheFunctionToCompleteTask(conteiner) {
             document.querySelector('#buttonAdd').textContent = 'Atualizar Tarefa'
 
             document.querySelector('#buttonAdd').onclick = () => {
-                if (! (document.getElementById('inputTarefa').value == node.getTitle() && document.getElementById('inputPrioridade').value == node.getPrioridade())){
-                    if(document.getElementById('inputTarefa').value != node.getTitle() && document.getElementById('inputPrioridade').value == node.getPrioridade()){
-                        node.title = document.getElementById('inputTarefa').value;
+                if (!(document.getElementById('inputTarefa').value == node.getTitle() && document.getElementById('inputPrioridade').value == node.getPrioridade())) {
+                    if (document.getElementById('inputTarefa').value != node.getTitle() && document.getElementById('inputPrioridade').value == node.getPrioridade()) {
+                        node.titulo = document.getElementById('inputTarefa').value;
                         renderToDoItens()
                     } else {
                         newTitle = document.getElementById('inputTarefa').value;
                         newPrioridade = document.getElementById('inputPrioridade').value
-                
+
                         todoList.editToDo(conteiner.childNodes[i].getAttribute('id'), newTitle, newPrioridade)
                     }
                 }
@@ -318,14 +318,34 @@ function renderCompletedItens() {
         console.log(divToDoItem)
         aux += 1
     }
-    renderToDoItens(todoList);
+    if (aux == 0) {
+        document.querySelector('#buttonLimpar2').style.display = 'none'
+    } else {
+        addFunctionUncompleteCompletedIten(document.querySelector('#conteinerDone'));
+        renderToDoItens(todoList);
+    }
+}
+
+function addFunctionUncompleteCompletedIten(conteiner) {
+    for (let i = 0; i < completedToDoList.length; i++) {
+        conteiner.childNodes[i].childNodes[0].onclick = () => {
+            index = completedToDoList.indexOf(completedToDoList[i])
+
+            if (index > -1) {
+                todoList.addToDo(completedToDoList[i].getTitle(), completedToDoList[i].getPrioridade())
+                completedToDoList.splice(index, 1);
+                renderToDoItens();
+                renderCompletedItens()
+            }
+        }
+    }
 }
 
 
 let completedToDoList = []
 let todoList = new ToDoList();
 
-addToDo.onclick = function () {
+addToDo.onclick = () => {
     let textoToDo = document.getElementById('inputTarefa').value
     let prioridade = document.getElementById('inputPrioridade').value
 
