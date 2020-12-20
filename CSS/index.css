@@ -113,10 +113,9 @@ html{
     .modalConteiner {
         display: none;
         position: fixed;
-        top: 60px;
         z-index: 1;
         width: 100%;
-        height: 100%;
+        height: 93%;
         background-color: #006eff;
         background-color: rgba(224, 224, 224, 0.699);
     }
